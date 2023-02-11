@@ -30,3 +30,8 @@ body {
   width: 50%;
   text-align: center;
 }
+#tambah {
+  justify-content: center;
+  margin: auto;
+  width: 51%;
+}

@@ -55,7 +55,7 @@ if (isset($_POST["cari"])) {
     <div class="container">
         <div class="row">
             <div class="col-6 my-3">
-                <a href="tambah.php">
+                <a href="crud/tambah.php">
                     <button class="btn btn-success fw-semibold">Tambah data Mahasiswa</button>
                 </a>
             </div>
@@ -82,10 +82,10 @@ if (isset($_POST["cari"])) {
                         <tbody>
                             <td><?php echo $i; ?></td>
                             <td>
-                                <a href="ubah.php?id=<?php echo $mhs["id"]; ?>">
+                                <a href="crud/ubah.php?id=<?php echo $mhs["id"]; ?>">
                                     <button class="btn btn-info btn-sm text-white fw-semibold" type="submit" name="cari">Ubah</button>
                                 </a>
-                                <a href="hapus.php?id=<?php echo $mhs["id"]; ?>" onclick="return confirm('Yakin menghapus data?');">
+                                <a href="crud/hapus.php?id=<?php echo $mhs["id"]; ?>" onclick="return confirm('Yakin menghapus data?');">
                                     <button class="btn btn-danger btn-sm text-white fw-semibold ms-1" type="submit" name="cari">Hapus</button>
                                 </a>
                             </td>
