@@ -1,10 +1,10 @@
 <?php
-// session_start();
+session_start();
 
-// if (!isset($_SESSION["login"])) {
-//     header("Location: login.php");
-//     exit;
-// }
+if (!isset($_SESSION["masuk"])) {
+    header("Location: login.php");
+    exit;
+}
 
 // Koneksi ke database mysql
 require "function.php";
@@ -42,11 +42,9 @@ if (isset($_POST["cari"])) {
     <nav class="navbar bg-primary navbar-dark">
         <div class="container">
             <a class="navbar-brand fs-1">Dashboard Admin</a>
-            <form class="d-flex">
-                <a href="logout.php">
-                    <button class="btn btn-light fw-semibold" type="submit">Logout</button>
-                </a>
-            </form>
+            <a href="logout.php">
+                <button class="btn btn-light fw-semibold">Logout</button>
+            </a>
         </div>
     </nav>
     <!-- akhir navbar -->
@@ -83,10 +81,10 @@ if (isset($_POST["cari"])) {
                             <td><?php echo $i; ?></td>
                             <td>
                                 <a href="crud/ubah.php?id=<?php echo $mhs["id"]; ?>">
-                                    <button class="btn btn-info btn-sm text-white fw-semibold" type="submit" name="cari">Ubah</button>
+                                    <button class="btn btn-info btn-sm text-white fw-semibold" type="submit">Ubah</button>
                                 </a>
                                 <a href="crud/hapus.php?id=<?php echo $mhs["id"]; ?>" onclick="return confirm('Yakin menghapus data?');">
-                                    <button class="btn btn-danger btn-sm text-white fw-semibold ms-1" type="submit" name="cari">Hapus</button>
+                                    <button class="btn btn-danger btn-sm text-white fw-semibold ms-1" type="submit">Hapus</button>
                                 </a>
                             </td>
                             <td><?php echo $mhs["npm"]; ?></td>
